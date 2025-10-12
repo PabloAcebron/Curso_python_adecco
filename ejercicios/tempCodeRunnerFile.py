@@ -19,10 +19,10 @@ for i in range (1,altura + 1):
 
     # Bucle interno: para cada número en la fila actual (desde 1 hasta el número de fila)
     # Escribe aquí tu código para el bucle interno
-    for j in range (1,i+1):
+    for j in range (i,altura):
         # Imprimir cada número seguido de un espacio (sin salto de línea)
         # Escribe aquí tu código para imprimir el número
-        print(j, end=" ")
+        print(range(1,j))
         
 
     # Después de completar una fila, hacer un salto de línea
