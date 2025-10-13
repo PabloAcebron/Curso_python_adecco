@@ -4,13 +4,13 @@ print("=== PROGRAMA: CALCULADORA DE ÁREA DE CÍRCULO ===\n")
 def calcular_area_circulo(radio):
     # 1. Definir el valor de pi
     # Escribe aquí tu código
-    pi =3.1415
+    PI =3.14159
     
-    pi = float(pi)
+    PI = float(PI)
     
     # 2. Calcular el área usando la fórmula: π * radio²
     # Escribe aquí tu código
-    resultado = pi * (radio*radio)
+    resultado = PI * (radio ** 2)
     
     # 3. Devolver el resultado
     # Escribe aquí tu código
@@ -48,11 +48,11 @@ print(f"Radio: {radio3} -> Área: {area3}")
 print("\n=== MODO INTERACTIVO ===")
 # Solicitar al usuario un radio y calcular su área
 # Escribe aquí tu código para pedir el radio al usuario
-radio_usuario = input("Dime el radio: ")
+radio_input = input("Dime el radio: ")
 
 # Convertir la entrada a número decimal
 # Escribe aquí tu código
-radio_usuario = int(radio_usuario)
+radio_usuario = float(radio_input)
 
 # Llamar a la función con el radio del usuario
 # Escribe aquí tu código

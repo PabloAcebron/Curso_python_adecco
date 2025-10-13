@@ -6,23 +6,23 @@ altura = input("dime la altura del triangulo: ")
 
 # Convertir la entrada a número entero
 # Escribe aquí tu código para la conversión
-altura = int(altura)
+altura_int = int(altura)
 
-print(f"\nGenerando patrón triangular de altura {altura}:")
+print(f"\nGenerando patrón triangular de altura {altura_int}:")
 print("-" * 30)
 
 # Generar el patrón usando bucles for anidados
 # Bucle externo: para cada fila (desde 1 hasta la altura)
 # Escribe aquí tu código para el bucle externo
 
-for i in range (1,altura + 1):
+for fila in range (1,altura_int + 1):
 
     # Bucle interno: para cada número en la fila actual (desde 1 hasta el número de fila)
     # Escribe aquí tu código para el bucle interno
-    for j in range (1,i+1):
+    for numero in range (1,fila+1):
         # Imprimir cada número seguido de un espacio (sin salto de línea)
         # Escribe aquí tu código para imprimir el número
-        print(j, end=" ")
+        print(numero, end=" ")
         
 
     # Después de completar una fila, hacer un salto de línea
