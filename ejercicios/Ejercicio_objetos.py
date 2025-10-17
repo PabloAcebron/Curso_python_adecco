@@ -37,13 +37,9 @@ class Libro:
      
     def informacion(self):
         
-    
-        if self.disponible:
-             self.disponible = "Disponible"
-        else:
-             self.disponible = "Prestado"
+        estado = "Disponible" if self.disponible else "Prestado"
         
-        return(f"El titulo es {self.titulo}, el autor es {self.autor}, tiene {self.paginas} paginas , esta {self.disponible}")
+        return(f"El titulo es {self.titulo}, el autor es {self.autor}, tiene {self.paginas} paginas , esta {estado}")
 
 
 def main():
