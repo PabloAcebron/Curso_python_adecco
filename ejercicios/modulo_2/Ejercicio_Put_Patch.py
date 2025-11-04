@@ -34,7 +34,7 @@ def actualizar_producto_completo(producto_id: int, producto: Producto):
                 "stock": producto.stock
             }
             return productos_db[i]
-    raise HTTPException(status_code=404, detail="404 - Usuario no encontrado")
+    raise HTTPException(status_code=404, detail="404 - Producto no encontrado")
 
 @app.patch("/productos/{producto_id}")
 def actualizar_usuario_parcial(producto_id: int, producto_patch: ProductoPatch):
@@ -44,13 +44,13 @@ def actualizar_usuario_parcial(producto_id: int, producto_patch: ProductoPatch):
             producto_index = i
     
     if producto_index is None:
-        raise HTTPException(status_code=404, detail="404 - Usuario no encontrado")
+        raise HTTPException(status_code=404, detail="404 - Producto no encontrado")
     
     datos_actualizacion = producto_patch.model_dump(exclude_unset=True)
     for campo, valor in datos_actualizacion.items():
         productos_db[producto_index][campo] = valor
         
     return {
-        "mensaje": "Usuario actualizado de forma parcial",
-        "usuario": productos_db[producto_index]
+        "mensaje": "Producto actualizado de forma parcial",
+        "Producto": productos_db[producto_index]
     }
